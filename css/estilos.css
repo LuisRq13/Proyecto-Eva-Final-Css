@@ -1,0 +1,306 @@
+@font-face {
+  font-family: "DancingScript";
+  src: url("DancingScript-Regular.otf");
+}
+
+body {
+  background: #02010a;
+}
+
+#contenido {
+  width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.contenedor {
+  display: flex;
+  flex-direction: row;
+}
+
+header {
+  background-color: #5b7989;
+  padding: 10px 0px 10px 10px;
+  border-radius: 10px 10px 0px 0px;
+  moz-border-radius: 10px 10px 0px 0px;
+  webkit-border-radius: 10px 10px 0px 0px;
+  animation: Slidein 1s;
+}
+
+@-webkit-keyframes Slidein {
+  0% {
+    margin-top: 150%;
+  }
+
+  60% {
+    margin-top: -5%;
+  }
+
+  100% {
+    margin-top: 0%
+  }
+}
+
+header h1 {
+  color: white;
+  width: 70%;
+  padding-left: 20px;
+  font-family: "DancingScript";
+  text-shadow: black 2px 2px 2px;
+}
+
+nav {
+  width: 250px;
+  padding-top: 35px;
+  padding-left: 5%;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+a {
+  margin: 0px 5px;
+  padding: 0px 5px;
+  color: white;
+  font-family: "DancingScript";
+  text-decoration: none;
+}
+
+#principal {
+  background-color: #82c3a6;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#principal img {
+  border: solid black 1px;
+  width: 85%;
+  display: block;
+  margin: 0 auto;
+}
+
+#secundario {
+  background-color: #d5c75f;
+  padding: 20px;
+  border: 1px;
+  display: flex;
+  flex-direction: row;
+}
+
+#secundario .contenedor > figure {
+  width: 50%;
+  padding-bottom: 3%;
+}
+
+figure > figcaption {
+  text-align: center;
+  font-family: "DancingScript";
+  padding-top: 10px;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-decoration: underline;
+}
+
+.foto > img {
+  height: 100%;
+  background-color: #d5c75f;
+  border: solid black 1px;
+  box-shadow: 5px 5px 10px;
+  transition: transform 1s;
+}
+
+#paisajes:hover {
+  transform: rotate(10deg);
+  color: #82c3a6;
+  border: solid black 2px;
+}
+
+#retratos:hover {
+  transform: translateX(20px) translateY(-5px);
+  color: #82c3a6;
+  border: solid black 2px;
+}
+
+footer {
+  background-color: #C6d5c5;
+  padding: 10px;
+  border-radius: 0px 0px 10px 10px;
+  -moz-border-radius: 0px 0px 10px 10px;
+  -webkit-border-radius: 0px 0px 10px 10px;
+}
+
+#footer {
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+#footer .contenedor {
+  padding-bottom: 70px;
+}
+
+#footer .contenedor > div {
+  width: 25%;
+  padding-left: 2%;
+  font-family: "DancingScript";
+}
+
+#footer .contenedor div > h3 {
+  font-size: 1.8em;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+#footer .contenedor div > p {
+  margin-top: 1%;
+  margin-bottom: 0px;
+  font-size: 18px;
+}
+
+#footer .contenedor div a {
+  text-decoration: none;
+  color: black;
+  padding-left: 0px;
+  margin-left: 0px;
+  font-family: "DancingScript";
+}
+
+.rs {
+ padding-right: 4px;
+}
+
+/* BUG:  */
+
+#galeria {
+  background-color: #d5c75f;
+  padding: 10px;
+  border: 1px;
+  display: flex;
+  flex-direction: column;
+}
+
+.fila1, .fila2 {
+  display: flex;
+  flex-direction: row;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+#galeria .fila1 div {
+  width: 33.3%;
+}
+
+#galeria .fila1 div img {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+#galeria .fila2 div {
+  width: 33.3%;
+}
+
+#galeria .fila2 div img {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+#galeria .foto1 {
+  filter: blur(10px);
+}
+
+#galeria .foto2, .foto4, .foto6 {
+  filter: grayscale(100%);
+}
+
+#galeria .foto3 {
+  filter: sepia(90%);
+}
+
+
+
+@media (max-width:900px)  {
+  #contenido {
+    width: 100%;
+  }
+
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header .contenedor {
+    margin-bottom: 1%;
+  }
+
+  header h1 {
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+  }
+
+  nav {
+    margin: 0 auto;
+    padding-top: 0px;
+  }
+
+  #secundario .contenedor{
+    width: 100%;
+  }
+
+  #secundario .contenedor > figure {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  #secundario .contenedor > figure:first-child {
+    margin-top: 1%;
+    margin-bottom: 5%;
+  }
+
+  figcaption {
+    font-size: 1.2em;
+  }
+
+  #footer .contenedor > div {
+    width: 100%;
+    padding-left: 2%;
+    padding-bottom: 5%;
+  }
+
+/* BUG:  */
+
+  .fila1, .fila2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fila1 {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+
+  .fila2 {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+
+  #galeria .fila1 div {
+    width: 100%;
+  }
+
+  #galeria .fila2 div {
+    width: 100%;
+  }
+
+  #galeria .fila1 div img {
+    padding-top: 5%;
+  }
+
+  #galeria .fila2 div img {
+    padding-top: 5%;
+  }
+}
